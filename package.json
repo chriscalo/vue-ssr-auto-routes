@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "generate-router": "node src/generate-routes.js",
-    "ssr:build": "yarn run generate-router && vue-cli-service ssr:build",
-    "ssr:serve": "yarn run generate-router && vue-cli-service ssr:serve",
-    "ssr:start": "cross-env NODE_ENV=production vue-cli-service ssr:serve --mode production"
+    "routes": "node src/generate-routes.js",
+    "build": "yarn run routes && vue-cli-service ssr:build",
+    "serve": "yarn run routes && vue-cli-service ssr:serve",
+    "start": "cross-env NODE_ENV=production vue-cli-service ssr:serve --mode production"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "fs-extra": "^7.0.1",
     "vue": "^2.6.6",
     "vue-route-generator": "^0.3.3",
     "vue-router": "^3.0.1",
