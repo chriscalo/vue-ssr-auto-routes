@@ -8,6 +8,7 @@ const code = generateRoutes({
 
 writeFileSyncRecursive(path.join(__dirname, "./router/routes.js"), code);
 
+// from https://gist.github.com/drodsou/de2ba6291aea67ffc5bc4b52d8c32abd
 // like writeFileSync but creates all folder paths if not exist
 // ----------------------------------------------------------
 function writeFileSyncRecursive(filename, content, charset) {
