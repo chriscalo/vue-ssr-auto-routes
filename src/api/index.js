@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -48,9 +47,6 @@ passport.deserializeUser((user, cb) => cb(null, user));
 const app = express();
 app.enable('trust proxy');
 
-// Use application-level middleware for common functionality, including
-// logging, parsing, and session handling.
-// app.use(morgan('combined'));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
