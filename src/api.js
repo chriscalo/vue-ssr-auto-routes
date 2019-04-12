@@ -120,7 +120,7 @@ app.route('/logout')
 module.exports.apiServer = app;
 
 if (require.main === module) {
-  console.log("Starting server…")
+  // FIXME: static serving for dist folder
   const PORT = process.env.PORT || 3000;
   const server = app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
