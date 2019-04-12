@@ -5,7 +5,7 @@ This project combines the following:
 - single-file components (SFCs, aka `.vue` files)
 - server-side rendering (SSR) with client-side hydration
 - automatic code splitting for every page
-- no need to manually write `vue-router` routes
+- a convention for mapping URLs to `.vue` files (no manually writing routes)
 - dev server with hot module reloading (HMR)
 - API server that gets merged with dev server
 
