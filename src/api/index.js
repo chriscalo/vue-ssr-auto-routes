@@ -128,8 +128,13 @@ app.route('/logout')
     res.redirect('/');
   });
 
-const PORT = process.env.PORT || 3000;
-const server = app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
-});
+module.exports.apiServer = app;
+
+if (require.main === module) {
+  console.log("Starting server…")
+  const PORT = process.env.PORT || 3000;
+  const server = app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`);
+    console.log('Press Ctrl+C to quit.');
+  });
+}
