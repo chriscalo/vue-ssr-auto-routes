@@ -6,7 +6,7 @@ createApp({
   async beforeApp({ router }) {
     await loadAsyncComponents({ router });
   },
-
+  
   afterApp({ app }) {
     app.$mount("#app");
   }
